@@ -385,7 +385,7 @@ function insertDB($nama, $kelamin, $alamat, $pekerjaan, $kd_penyakit, $ip, $tang
 }
 
 function deleteDB($nama, $alamat, $kelamin, $pekerjaan) {
-    $sql = "DELETE FROM ANALISA_HASIL WHERE NAMA = '$nama' ALAMAT='$alamat' AND KELAMIN = '$kelamin' AND PEKERJAAN = '$pekerjaan'";
+    $sql = "DELETE FROM ANALISA_HASIL WHERE NAMA = '$nama' AND ALAMAT='$alamat' AND KELAMIN = '$kelamin' AND PEKERJAAN = '$pekerjaan'";
     $query = mysql_query($sql);
     return $sql;
 }
