@@ -1,6 +1,8 @@
 <?php
 error_reporting(0);
 include './librari/inc.koneksidb.php';
+session_start();
+
 ?>
 <html>
     <head>
@@ -15,15 +17,27 @@ include './librari/inc.koneksidb.php';
     <body>
 
     <center>
-
+        <hr/>
         <table width="1153" height="827" border="1" cellpadding="2" bordercolor="#666666">
             <tr>
-                <th height="161" colspan="2" scope="col"><div align="left"><img src="img/banner.gif" width="1141" height="250"></div></th>
+                <th height="161" colspan="2" scope="col">
+                    <div align="left">
+                        <img src="img/banner.gif" width="1141" height="250">
+                    </div>
+                </th>
             </tr>
             <tr>
                 <td width="245" height="565" valign="top"><ul id="css3menu100" class="topmenu">
-                        <li class="topfirst"><a href="?page=home" style="width:223px;height:48px;line-height:48px;"><img src="CSS3 MenuPAKARver1_files/css3menu100/home3.png" alt=""/>HALAMAN UTAMA</a></li>
-                        <li class="topmenu"><a href="#" style="width:223px;height:48px;line-height:48px;"><span><img src="CSS3 MenuPAKARver1_files/css3menu100/service.png" alt=""/>MENU USER</span></a>
+                        <li class="topfirst">
+                            <a href="?page=home" style="width:223px;height:48px;line-height:48px;">
+                                <img src="CSS3 MenuPAKARver1_files/css3menu100/home3.png" alt=""/>
+                                HALAMAN UTAMA
+                            </a>
+                        </li>
+                        <li class="topmenu">
+                            <a href="#" style="width:223px;height:48px;line-height:48px;">
+                                <span>
+                                    <img src="CSS3 MenuPAKARver1_files/css3menu100/service.png" alt=""/>MENU USER</span></a>
                             <ul>
                                 <li class="subfirst"><a href="?page=daftar"><img src="CSS3 MenuPAKARver1_files/css3menu100/favour2.png" alt=""/>KONSULTASI</a></li>
                                 <li><a href="?page=dafsakit"><img src="CSS3 MenuPAKARver1_files/css3menu100/favour3.png" alt=""/>JENIS PENYAKIT</a></li>
