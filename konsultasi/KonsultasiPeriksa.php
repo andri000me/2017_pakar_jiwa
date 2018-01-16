@@ -123,10 +123,10 @@ if ($RbPilih == "YA") {
             if ($_SESSION['gejala1'] == "delusi" && $_SESSION['gejala2'] == "halusinasi") {
                 $delete = deleteDB($nama, $alamat, $kelamin, $pekerjaan);
                 kesimpulan($nama, $kelamin, $alamat, $pekerjaan, $NOIP, $tgl, $koneksi, 'psikosis');
-            }else if ($_SESSION['gejala1'] == "histeria") {
+            } else if ($_SESSION['gejala1'] == "histeria") {
                 $delete = deleteDB($nama, $alamat, $kelamin, $pekerjaan);
                 kesimpulan($nama, $kelamin, $alamat, $pekerjaan, $NOIP, $tgl, $koneksi, 'neurosis');
-            } 
+            }
             break;
         case "kecemasan":
             if ($_SESSION['gejala1'] == "-1") {
@@ -153,10 +153,10 @@ if ($RbPilih == "YA") {
             //kesimpulan pada fobia
             if ($_SESSION['gejala1'] == "delusi") {
                 echo "<meta http-equiv='refresh' content='0; url=index.php?page=damensia'>";
-            }else if ($_SESSION['gejala1'] == "histeria") {
+            } else if ($_SESSION['gejala1'] == "histeria") {
                 $delete = deleteDB($nama, $alamat, $kelamin, $pekerjaan);
                 kesimpulan($nama, $kelamin, $alamat, $pekerjaan, $NOIP, $tgl, $koneksi, 'psikosis');
-            } 
+            }
             break;
         case "kesulitan mengeja":
             if ($_SESSION['gejala1'] == "-1") {
@@ -362,7 +362,7 @@ if ($RbPilih == "YA") {
             } else {
                 $_SESSION['gejala3'] = "-1";
             }
-            echo "<meta http-equiv='refresh' content='0; url=index.php?page=hasil'>";
+            echo "<meta http-equiv='refresh' content='0; url=index.php?page=nohasil'>";
             break;
         case "melawan orang tua":
             $_SESSION['gejala1'] = "-1";
@@ -387,7 +387,7 @@ if ($RbPilih == "YA") {
             }
             if ($_SESSION['gejala1'] == "delusi") {
                 echo "<meta http-equiv='refresh' content='0; url=index.php?page=halusinasi'>";
-            }else if($_SESSION['gejala1'] == "histeria"){
+            } else if ($_SESSION['gejala1'] == "histeria") {
                 echo "<meta http-equiv='refresh' content='0; url=index.php?page=halusinasi'>";
             }
             break;
@@ -401,7 +401,7 @@ if ($RbPilih == "YA") {
             }
             if ($_SESSION['gejala1'] == "delusi") {
                 echo "<meta http-equiv='refresh' content='0; url=index.php?page=kecemasan'>";
-            }else if ($_SESSION['gejala1'] == "histeria") {
+            } else if ($_SESSION['gejala1'] == "histeria") {
                 echo "<meta http-equiv='refresh' content='0; url=index.php?page=stress'>";
             }
             break;
@@ -426,9 +426,9 @@ if ($RbPilih == "YA") {
                 $_SESSION['gejala3'] = "-1";
             }
             if ($_SESSION['gejala1'] == "delusi") {
-                echo "<meta http-equiv='refresh' content='0; url=index.php?page=hasil'>";
-            }else if ($_SESSION['gejala1'] == "histeria") {
-                echo "<meta http-equiv='refresh' content='0; url=index.php?page=hasil'>";
+                echo "<meta http-equiv='refresh' content='0; url=index.php?page=nohasil'>";
+            } else if ($_SESSION['gejala1'] == "histeria") {
+                echo "<meta http-equiv='refresh' content='0; url=index.php?page=nohasil'>";
             }
             break;
         case "fobia":
@@ -485,7 +485,7 @@ if ($RbPilih == "YA") {
             }
             break;
         case "obsesif kopulsif":
-            echo "<meta http-equiv='refresh' content='0; url=index.php?page=hasil'>";
+            echo "<meta http-equiv='refresh' content='0; url=index.php?page=nohasil'>";
             break;
     }
 }

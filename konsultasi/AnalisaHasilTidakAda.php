@@ -1,22 +1,6 @@
 <?php 
 include "librari/inc.koneksidb.php";
 session_start();
-$NOIP = $_SERVER['REMOTE_ADDR'];
-$id_user = $_SESSION['id_user'];
-$sql = "SELECT analisa_hasil.*, penyakit.* 
-		FROM analisa_hasil,penyakit 
-		WHERE penyakit.kd_penyakit=analisa_hasil.kd_penyakit
-		AND analisa_hasil.id='$id_user'
-		ORDER BY analisa_hasil.id DESC LIMIT 1";
-$qry = mysql_query($sql, $koneksi) 
-	   or die ("Query Hasil salam".mysql_error());
-$data= mysql_fetch_array($qry);
-if ($data['kelamin']=="P") {
-	$kelamin = "Pria";
-}
-else {
-	$kelamin = "Wanita";
-}
 ?>
 <html>
 <head>
@@ -43,19 +27,19 @@ else {
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td width="152">Nama</td>
-    <td width="893"><? echo $data['nama']; ?></td>
+    <td width="893"><?php echo $_SESSION['nama']; ?></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td>Kelamin</td>
-    <td><? echo $kelamin; ?></td>
+    <td><?php echo $_SESSION['nama']; ?></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td>Alamat</td>
-    <td><? echo $data['alamat']; ?></td>
+    <td><?php echo $_SESSION['alamat']; ?></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td>Pekerjaan</td>
-    <td><? echo $data['pekerjaan']; ?></td>
+    <td><?php echo $_SESSION['pekerjaan']; ?></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td>&nbsp;</td>
@@ -66,19 +50,19 @@ else {
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td>Penyakit</td>
-    <td><? echo $data['nm_penyakit']; ?></td>
+    <td>Tidak ada penyakit terdeteksi</td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td valign="top">Keterangan</td>
-    <td><? echo $data['keterangan']; ?></td>
+    <td>-</td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td valign="top">Pemeriksaan</td>
-    <td><? echo $data['pemeriksaan']; ?></td>
+    <td>-</td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td valign="top">Solusi</td>
-    <td><? echo $data['solusi']; ?></td>
+    <td>-</td>
   </tr>
 </table>
 

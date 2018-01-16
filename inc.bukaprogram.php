@@ -39,26 +39,6 @@ elseif ($page == "daftarsim") {
         echo "FILE PROGRAM FORM PASIEN SIMPAN TIDAK ADA";
     }
 }
-
-////halaman konsul lama
-//elseif ($page == "konsul") {
-//    if (file_exists("KonsultasiFm.php")) {
-//        include "KonsultasiFm.php";
-//    } else {
-//        echo "FILE PROGRAM FORM KONSULTASI TIDAK ADA";
-//    }
-//}
-//
-////halaman konsul cek lama
-//elseif ($page == "konsulcek") {
-//    echo "adsadsad";
-//    exit();
-//    if (file_exists("KonsultasiPeriksa.php")) {
-//        include "KonsultasiPeriksa.php";
-//    } else {
-//        echo "FILE PROGRAM KONSULTASI PERIKSA TIDAK ADA";
-//    }
-//} 
 //halaman konsul cek baru
 elseif ($page == "konsulcek") {
     if (file_exists("konsultasi/KonsultasiPeriksa.php")) {
@@ -72,6 +52,15 @@ elseif ($page == "konsulcek") {
 elseif ($page == "hasil") {
     if (file_exists("konsultasi/AnalisaHasil.php")) {
         include "konsultasi/AnalisaHasil.php";
+    } else {
+        echo "FILE PROGRAM ANALISA HASIL TIDAK ADA";
+    }
+}
+
+//halaman hasil
+elseif ($page == "nohasil") {
+    if (file_exists("konsultasi/AnalisaHasilTidakAda.php")) {
+        include "konsultasi/AnalisaHasilTidakAda.php";
     } else {
         echo "FILE PROGRAM ANALISA HASIL TIDAK ADA";
     }
