@@ -2,10 +2,11 @@
 include "librari/inc.koneksidb.php";
 session_start();
 $NOIP = $_SERVER['REMOTE_ADDR'];
+$id_user = $_SESSION['id_user'];
 $sql = "SELECT analisa_hasil.*, penyakit.* 
 		FROM analisa_hasil,penyakit 
 		WHERE penyakit.kd_penyakit=analisa_hasil.kd_penyakit
-		AND analisa_hasil.noip='$NOIP'
+		AND analisa_hasil.id='$id_user'
 		ORDER BY analisa_hasil.id DESC LIMIT 1";
 $qry = mysql_query($sql, $koneksi) 
 	   or die ("Query Hasil salam".mysql_error());

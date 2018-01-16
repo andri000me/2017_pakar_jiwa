@@ -17,9 +17,9 @@ session_start();
           <td><b>JAWABLAH PERTANYAAN BERIKUT :</b></td>
         </tr>
         <tr>
-          <td width="312" bgcolor="#FFFFFF">Apakah  anda mengalami Autis
+          <td width="312" bgcolor="#FFFFFF">Apakah  anda mengalami Kesulitan Mengeja
             ?
-            <input name="TxtKdGejala" type="hidden" value="Autis"></td>
+            <input name="TxtKdGejala" type="hidden" value="kesulitan mengeja"></td>
         </tr>
         <tr>
           <td bgcolor="#FFFFFF"><input type="radio" name="RbPilih" value="YA" checked>
