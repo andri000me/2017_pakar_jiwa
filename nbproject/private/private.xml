@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/konsultasi/KonsultasiPeriksa.php</file>
-            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/konsultasi/AnalisaHasilTidakAda.php</file>
-            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/inc.bukaprogram.php</file>
-            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/PasienAddSim.php</file>
+            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/pakar/inc.bukaprogram.php</file>
+            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/pakar/EditRelasi.php</file>
+            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/pakar/RelasiAddPilih.php</file>
+            <file>file:/C:/xampp/htdocs/2017_pakar_jiwa/pakar/BackEnd.php</file>
         </group>
     </open-files>
 </project-private>

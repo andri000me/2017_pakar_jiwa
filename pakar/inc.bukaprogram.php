@@ -1,4 +1,4 @@
-<?php
+`<?php
 error_reporting(~E_NOTICE);
 
 $page= @$_REQUEST['page'];
@@ -145,5 +145,12 @@ elseif ($page=="rekapKonsul") {
 	else {
 		echo "FILE LAP PENYAKIT  ADA";
 	}
+}elseif($page=="EditRelasi"){
+   if(file_exists ("EditRelasi.php")) {
+		include "EditRelasi.php";
+	}
+	else {
+		echo "FILE EDIT RELASI TIDAK ADA";
+	} 
 }
 ?>
