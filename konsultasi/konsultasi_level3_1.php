@@ -1,5 +1,4 @@
 <?php
-echo "konsultasi level 3 tidak yang pertama";
 include "librari/inc.koneksidb.php";
 $NOIP = $_SERVER['REMOTE_ADDR'];
 $level1 = $_SESSION['level1'];

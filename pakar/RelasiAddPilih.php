@@ -29,7 +29,6 @@ $kdsakit = $_REQUEST['kdsakit'];
                 <tr>
                     <td>
                         <select name="CmbPenyakit" id="CmbPenyakit">
-                            <option value="">[ Daftar Penyakit ]</option>
                             <?php
                             $sqlp = "SELECT * FROM penyakit ORDER BY kd_penyakit";
                             $qryp = mysql_query($sqlp, $koneksi)
@@ -207,12 +206,18 @@ $kdsakit = $_REQUEST['kdsakit'];
                                             success: function (response, textStatus, jqXHR) {
                                                 if (response == 1) {
                                                     alert("berhasil insert relasi baru");
-                                                    $('#simpan'+param).attr("disabled", "");
-                                                    $('#hapus'+param).attr("disabled", "");
+                                                    $('#simpan' + param).attr("disabled", "");
+                                                    $('#hapus' + param).attr("disabled", "");
+                                                    $('#penyakit' + param).attr("disabled", "");
+                                                    $('#gejala1_' + param).attr("disabled", "");
+                                                    $('#gejala2_' + param).attr("disabled", "");
+                                                    $('#gejala3_' + param).attr("disabled", "");
                                                 } else if (response == 0) {
                                                     alert("gagal insert relasi baru");
                                                 } else if (response == 99) {
                                                     alert("data sudah ada. tolong pilih relasi lain")
+                                                } else {
+                                                    alert(response);
                                                 }
                                             },
                                             complete: function (jqXHR, textStatus) {
