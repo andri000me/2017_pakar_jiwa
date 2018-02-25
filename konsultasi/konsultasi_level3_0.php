@@ -1,19 +1,15 @@
 <?php
+echo "konsultasi level 3";
 include "librari/inc.koneksidb.php";
 $NOIP = $_SERVER['REMOTE_ADDR'];
-session_start();
-$sql = "SELECT DISTINCT
- r.kd_gejala1, g.nm_gejala AS gejala1
-FROM relasi r
-LEFT JOIN penyakit p ON p.kd_penyakit = r.kd_penyakit
-LEFT JOIN gejala g ON g.kd_gejala = r.kd_gejala1
-LEFT JOIN gejala g1 ON g1.kd_gejala = r.kd_gejala2
-LEFT JOIN gejala g2 ON g2.kd_gejala = r.kd_gejala3
-ORDER BY  g.nm_gejala ASC limit 1";
+$level1 = $_SESSION['level1'];
+$level2 = $_SESSION['level2'];
+$sql = " select distinct kd_gejala3, gejala3 from vw_relasi where kd_gejala1 = '$level1' and kd_gejala2 = '$level2' order by gejala3 asc limit 1";
 $query = mysql_query($sql, $koneksi);
 $gejala = mysql_fetch_assoc($query);
-$kode_gejala1 = $gejala['kd_gejala1'];
-$nama_gejala1 = $gejala['gejala1'];
+$kode_gejala1 = $gejala['kd_gejala3'];
+$nama_gejala1 = $gejala['gejala3'];
+session_start();
 ?>
 <html>
     <head>
@@ -22,7 +18,7 @@ $nama_gejala1 = $gejala['gejala1'];
     <body>
         <!--<form action="?page=konsulcek" method="post" name="form1" target="_self">-->
         <form action="?page=konsulcekpertama" method="post" name="form1" target="_self">
-            <input type="hidden" name="level" value="0">
+            <input type="hidden" name="level3" value="0">
             <p>&nbsp;</p>
             <table width="200" border="0"align="center" >
                 <tr>
@@ -56,10 +52,5 @@ $nama_gejala1 = $gejala['gejala1'];
                 </tr>
             </table>
         </form>
-        <script>
-            $(document).ready(function () {
-//                alert("123");
-            });
-        </script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 ?>
 <html>
     <head>
@@ -9,7 +9,10 @@ error_reporting(0);
     <center>
         <table width="1200" height="300" border="1" cellpadding="2" bordercolor="#CCCCCC">
             <tr>
-                <th height="161" colspan="2" scope="col"><div align="left"><img src="images/banner.gif" width="1200" height="250"></div></th>
+                <th height="161" colspan="2" scope="col"><div align="left">
+                        <img src="images/banner.gif" width="1200" height="250">
+                    </div>
+                </th>
             </tr>
             <tr>    
                 <td>
