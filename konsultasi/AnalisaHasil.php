@@ -96,3 +96,16 @@ $solusi = $hasil['solusi'];
         </table>
     </body>
 </html>
+
+<?php
+$NOIP 		= $_SERVER['REMOTE_ADDR'];
+$sql_in = "INSERT INTO analisa_hasil SET
+				  nama='$_SESSION[nama]',
+				  kelamin='$_SESSION[kelamin]',
+				  alamat='$_SESSION[alamat]',
+				  pekerjaan='$_SESSION[pekerjaan]',
+				  kd_penyakit='$kd_penyakit',
+				  noip='$NOIP',
+				  tanggal=now()";
+$query = mysql_query($sql_in, $koneksi);
+?>

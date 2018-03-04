@@ -71,7 +71,7 @@ function printpage()
 $server 	= "localhost";
 $username 	= "root";
 $password 	= "";
-$db 		= "pakarburung";
+$db 		= "2017_pakar_jiwa";
 $tbl 		= "analisa_hasil";
 
 $koneksi = mysql_connect($server,$username,$password); 

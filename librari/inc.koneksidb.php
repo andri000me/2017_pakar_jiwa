@@ -6,7 +6,7 @@
 
 $my['host'] = "localhost";
 $my['user'] = "root";
-$my['pass'] = "miko";
+$my['pass'] = "";
 $my['dbs'] = "2017_pakar_jiwa";
 
 $koneksi = mysql_connect($my['host'], $my['user'], $my['pass']);

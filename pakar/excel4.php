@@ -71,8 +71,8 @@ function printpage()
 $server 	= "localhost";
 $username 	= "root";
 $password 	= "";
-$db 		= "pakarburung";
-$tbl 		= "gejala";
+$db 		= "2017_pakar_jiwa";
+$tbl 		= "analisa_hasil";
 
 $koneksi = mysql_connect($server,$username,$password); 
 mysql_select_db($db, $koneksi) or die("Cannot connect to database..");

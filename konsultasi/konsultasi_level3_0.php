@@ -4,7 +4,6 @@ $NOIP = $_SERVER['REMOTE_ADDR'];
 $level1 = $_SESSION['level1'];
 $level2 = $_SESSION['level2'];
 $sql = "select distinct kd_gejala3, gejala3 from vw_relasi where kd_gejala1 = '$level1' and kd_gejala2 = '$level2' order by gejala3 asc limit 1";
-echo $sql;
 $query = mysql_query($sql, $koneksi);
 $gejala = mysql_fetch_assoc($query);
 $kode_gejala1 = $gejala['kd_gejala3'];
