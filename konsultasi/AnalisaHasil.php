@@ -98,14 +98,17 @@ $solusi = $hasil['solusi'];
 </html>
 
 <?php
+$lahir = $_SESSION['lahir'];
 $NOIP 		= $_SERVER['REMOTE_ADDR'];
 $sql_in = "INSERT INTO analisa_hasil SET
 				  nama='$_SESSION[nama]',
 				  kelamin='$_SESSION[kelamin]',
 				  alamat='$_SESSION[alamat]',
 				  pekerjaan='$_SESSION[pekerjaan]',
+                  lahir=STR_TO_DATE('$lahir', '%d-%m-%Y'),
 				  kd_penyakit='$kd_penyakit',
 				  noip='$NOIP',
 				  tanggal=now()";
+                  // echo($sql_in);
 $query = mysql_query($sql_in, $koneksi);
 ?>

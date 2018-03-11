@@ -43,6 +43,11 @@ unset($_SESSION['level3']);
                                     <input type="radio" name="RbKelamin" value="W">
                                     Wanita</td>
                             </tr>
+
+                            <tr bgcolor="#FFFFFF">
+                                <td>TANGGAL LAHIR</td>
+                                <td><input name="TxtTglLahir" type="text" size="35" maxlength="60" id="TxtTglLahir" readonly="" value="<?php echo date("d-m-Y")?>"></td>
+                            </tr>
                             <tr bgcolor="#FFFFFF">
                                 <td>ALAMAT</td>
                                 <td><input name="TxtAlamat" type="text" value="<?= $TxtAlamat; ?>" size="35" maxlength="60"></td>
@@ -61,5 +66,12 @@ unset($_SESSION['level3']);
                 </tr>
             </table>
         </form>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $( "#TxtTglLahir" ).datepicker({ 
+                    dateFormat: 'dd-mm-yy' 
+                });
+            });
+        </script>
     </body>
 </html>

@@ -84,6 +84,7 @@ echo "  <tr bgcolor='#CCCCCC'>";
 echo "   <th>NO</th>";
 echo "   <th>NAMA</th>";
 echo "   <th>KELAMIN</th>";
+echo "   <th>TGL LAHIR</th>";
 echo "   <th>ALAMAT</th>";
 echo "   <th>PEKERJAAN</th>";
 echo "   <th>KODE PENYAKIT</th>";
@@ -99,10 +100,12 @@ echo "  </tr>";
 		  while($row = mysql_fetch_object($query)){
 		  		if($bgcolor=='#f1f1f1'){$bgcolor='#ffffff';}
 				else{$bgcolor='#f1f1f1';}
+		  $tgl = date('d-m-Y',strtotime($row->lahir));
 				echo "<tr bgcolor=$bgcolor>";
 				echo "	<td align='center' height='18'><strong>$no</strong></td>";
 				echo "	<td>{$row->nama}&nbsp;</td>";
 				echo "	<td>{$row->kelamin}&nbsp;</td>";
+				echo "	<td>$tgl&nbsp;</td>";
 				echo "	<td>{$row->alamat}&nbsp;</td>";
 				echo "	<td>{$row->pekerjaan}&nbsp;</td>";
 				echo "	<td>{$row->kd_penyakit}&nbsp;</td>";

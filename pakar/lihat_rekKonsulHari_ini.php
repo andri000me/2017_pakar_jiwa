@@ -51,6 +51,10 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
       <td><? echo $data['kelamin']; ?></td>
     </tr>
     <tr bgcolor="#FFFFFF">
+      <td valign="top">Tgl Lahir </td>
+      <td><? echo date('d-m-Y',strtotime($data['kelamin'])); ?></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
       <td valign="top">alamat</td>
       <td><? echo $data['alamat']; ?></td>
     </tr>

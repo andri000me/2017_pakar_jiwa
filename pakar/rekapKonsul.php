@@ -64,7 +64,8 @@ echo "<table border='2'>";
 echo "<tr bgcolor='".$warnaHeading."'>
 		<td> NO </td>
 		<td> NAMA </td>
-		<td> KELAMIN </td>
+    <td> KELAMIN </td>
+		<td> TGL LAHIR </td>
 		<td> ALAMAT </td>
 		<td> PEKERJAAN </td>
 		<td> KODE PENYAKIT </td>
@@ -76,7 +77,8 @@ while($data = mysql_fetch_array($result))
 {
    echo "<tr><td>".$data['id'].
    		"</td><td>".$data['nama'].
-		"</td><td>".$data['kelamin'].
+    "</td><td>".$data['kelamin'].
+		"</td><td>".date('d-m-Y',strtotime($data['lahir'])).
 		"</td><td>".$data['alamat'].
 		"</td><td>".$data['pekerjaan'].
 		"</td><td>".$data['kd_penyakit'].

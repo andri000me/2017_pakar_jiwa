@@ -7,11 +7,13 @@ $TxtNama = $_REQUEST['TxtNama'];
 $RbKelamin = $_REQUEST['RbKelamin'];
 $TxtAlamat = $_REQUEST['TxtAlamat'];
 $TxtPekerjaan = $_REQUEST['TxtPekerjaan'];
+$TxtTglLahir = $_REQUEST['TxtTglLahir'];
 #inisialisasi session
 $_SESSION['nama'] = $TxtNama;
 $_SESSION['kelamin'] = $RbKelamin;
 $_SESSION['alamat'] = $TxtAlamat;
 $_SESSION['pekerjaan'] = $TxtPekerjaan;
+$_SESSION['lahir'] = $TxtTglLahir;
 
 $_SESSION['autis'] = "-1";
 $_SESSION['damesia'] = "-1";

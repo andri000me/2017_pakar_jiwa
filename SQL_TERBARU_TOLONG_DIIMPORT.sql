@@ -34,11 +34,6 @@ CREATE TABLE IF NOT EXISTS `analisa_hasil` (
 -- Dumping data for table 2017_pakar_jiwa.analisa_hasil: 3 rows
 DELETE FROM `analisa_hasil`;
 /*!40000 ALTER TABLE `analisa_hasil` DISABLE KEYS */;
-INSERT INTO `analisa_hasil` (`id`, `nama`, `kelamin`, `alamat`, `pekerjaan`, `kd_penyakit`, `noip`, `tanggal`) VALUES
-	(0302, 'miko', 'P', 'miko', 'miko', 'P006', '127.0.0.1', '2018-01-16 11:47:20'),
-	(0292, '2', 'P', '2', '3', 'P006', '127.0.0.1', '2018-01-16 09:27:39'),
-	(0299, '1', 'P', '1', '1', 'P005', '127.0.0.1', '2018-01-16 10:16:03');
-/*!40000 ALTER TABLE `analisa_hasil` ENABLE KEYS */;
 
 -- Dumping structure for table 2017_pakar_jiwa.gejala
 DROP TABLE IF EXISTS `gejala`;

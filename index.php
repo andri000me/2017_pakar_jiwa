@@ -10,8 +10,10 @@ session_start();
         <title>SISTEM PAKAR GANGGUAN MENTAL</title>
         <!-- Start css3menu.com HEAD section -->
         <link rel="stylesheet" href="CSS3 MenuPAKARver1_files/css3menu100/style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
+        <link rel="stylesheet" type="text/css" href="jQueryUI/jquery-ui-1.10.4.custom.min.css">
         <!-- End css3menu.com HEAD section -->
         <script src="pakar/jquery-3.3.1.min.js"></script>
+        <script src="jQueryUI/jquery-ui.min.js"></script>
     </head>
     <body>
     <center>
